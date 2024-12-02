@@ -4,8 +4,7 @@ class Users::SessionsController < Devise::SessionsController
 
   # GET /login
   def new
-    # You might not need to render anything for an API.
-    render json: { message: "Please provide login credentials." }, status: :ok
+    super
   end 
 
   # POST /login
