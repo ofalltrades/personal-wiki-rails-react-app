@@ -70,4 +70,6 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
+
+  config.allowed_cors_origins = ['localhost:3001', '127.0.0.1:3001']
 end
