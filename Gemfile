@@ -5,8 +5,7 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.1"
 
-# Use sqlite3 as the database for Active Record
-#gem "sqlite3", "~> 1.4"
+# Use postgres as the database for Active Record
 gem "pg", "~> 1.5.9"
 
 # Use the Puma web server [https://github.com/puma/puma]
@@ -39,6 +38,8 @@ gem "rack-cors"
 gem 'devise'
 gem 'devise-jwt'
 
+gem 'rack-timeout', "~> 0.7.0", require: "rack/timeout/base"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
@@ -51,4 +52,3 @@ group :development do
   # gem "spring"
 
 end
-
