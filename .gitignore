@@ -31,8 +31,8 @@
 !/tmp/storage/.keep
 
 # Ignore database files
-/db/*.sqlite3
-/db/*.sqlite3-journal
+# /db/*.sqlite3
+# /db/*.sqlite3-journal
 
 # Ignore master key for decrypting credentials and more.
 /config/credentials.yml.enc
@@ -48,3 +48,9 @@
 # Ignore other IDE or OS-specific files
 .DS_Store
 *.swp
+
+/config/credentials/development.key
+/config/credentials/production.key
+/config/credentials/test.key
+
+
