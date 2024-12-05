@@ -30,5 +30,18 @@ module PersonalWikiBackend
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Logging will always have a small impact on the performance 
+    #   of your Rails app, particularly when logging to disk.
+    config.active_record.query_log_tags_enabled = true
+
+    # Allows you to set the class that will be used as console when 
+    #   you run bin/rails console. It's best to run it in the console block:
+    console do
+      # this block is called only when running console,
+      # so we can safely require pry here
+      require "pry"
+      config.console = Pry
+    end    
   end
 end
